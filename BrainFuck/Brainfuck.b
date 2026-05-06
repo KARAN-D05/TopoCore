@@ -1,3 +1,3 @@
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++.
 
-To Run: https://copy.sh/brainfuck/
+To Run: https://copy(dot)sh/brainfuck/
