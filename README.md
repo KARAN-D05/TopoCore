@@ -2,6 +2,10 @@
 
 > A spatial execution architecture where computation emerges from movement through symbolic space.
 
+## ⚙️ Implementation Stack
+![Brainfuck](https://img.shields.io/badge/Brainfuck-FF6F00?style=for-the-badge&logoColor=black)
+![Befunge](https://img.shields.io/badge/Befunge-7C4DFF?style=for-the-badge&logoColor=white)
+
 ## What is TopoCore?
 
 TopoCore is an experimental hardware architecture inspired by two-dimensional programming languages such as Befunge.
