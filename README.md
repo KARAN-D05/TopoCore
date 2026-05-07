@@ -5,6 +5,9 @@
 ## ⚙️ Implementation Stack
 ![Brainfuck](https://img.shields.io/badge/Brainfuck-212121?style=for-the-badge&logoColor=white)
 ![Befunge](https://img.shields.io/badge/Befunge-00BCD4?style=for-the-badge&logoColor=black)
+![Verilog](https://img.shields.io/badge/Verilog-FFEA00?style=for-the-badge&logoColor=black)
+![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logoColor=white)
 
 ## What is TopoCore?
 
