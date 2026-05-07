@@ -27,10 +27,12 @@ x increases moving right. y increases moving down.
 Befunge uses a stack for memory, not a tape.
 All operations push to or pop from the stack.
 
+```
 push 3 → [ 3 ]
 push 5 → [ 5 ][ 3 ]
 pop    → gives 5, stack becomes [ 3 ]
 pop    → gives 3, stack becomes empty
+```
 
 Last in, first out. No named locations. No pointer.
 
