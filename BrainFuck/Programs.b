@@ -24,5 +24,3 @@ K=75 (15x5) space=32 (8x4) D=68 (17x4)
 Input ASCII it stores its corresponding Decimal A = 65
 Add 1 and print 66(B)
 ,+.
-
-To Run: https://sange(dot)fi/esoteric/brainfuck/impl/interp/i(dot)html
