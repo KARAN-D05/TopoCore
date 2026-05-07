@@ -1,7 +1,3 @@
-; Grid positions are (column, row) = (x, y)
-; Cursor starts at (0,0) moving right
-; Stack is last in first out
-
 ; Print A (arithmetic)
 ; 8*8=64, 64+1=65, ASCII 65 = A
 ; Grid: single row
