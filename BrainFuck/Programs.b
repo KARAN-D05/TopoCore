@@ -24,3 +24,12 @@ K=75 (15x5) space=32 (8x4) D=68 (17x4)
 Input ASCII it stores its corresponding Decimal A = 65
 Add 1 and print 66(B)
 ,+.
+
+Nested Loop
+Add 1 to cell 2 three times(Cell 1) and repeat 2 times(Cell 0)
+++[>+++[>+<-]<-]>>
+
+Hello World!
+ H  e   l   l   o      W  o   r   l   d  !
+72 101 108 108 111 32 87 111 114 108 100 33
+++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++.
