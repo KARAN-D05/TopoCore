@@ -7,11 +7,13 @@
 - A pointer sitting under one cell at a time.
 - All operations happen on the current cell only.
 
+```
 ┌───┬───┬───┬───┬───┐
 │ 0 │ 0 │ 0 │ 0 │ 0 │ ...
 └───┴───┴───┴───┴───┘
 ^
 pointer starts here
+```
 
 ## The 8 Commands
 
