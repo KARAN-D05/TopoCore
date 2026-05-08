@@ -104,8 +104,8 @@ It is:
 ### The Design Consequence
 This argument has a direct architectural implication. Befunge enforces
 locality partially, the cursor moves one step at a time. But arbitrary
-jumps are possible. Topocore's design decision to enforce strict locality
-- no arbitrary jumps, only neighbor traversal is what completes the
+jumps are possible. Topocore's design decision to enforce strict locality,
+no arbitrary jumps, only neighbor traversal is what completes the
 semasiographic argument. This is not an aesthetic choice. It is what makes
 the theoretical claim hold.
 
