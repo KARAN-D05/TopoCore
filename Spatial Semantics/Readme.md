@@ -1,4 +1,4 @@
-# Why TopoCore is Semasiographic
+# Spatial Semantics - Why TopoCore is Semasiographic
 
 ## The Criticism
 2D CPU initially looks like a more complicared way of organizing logical linearity of computation.
@@ -7,7 +7,7 @@
 Computation is sequential at its core so logical linearity always stays. What differs is how we encode that linearity.
 ```
 
-NORMAL CPU:
+Normal CPU:
 The logical linearity is encoded in address order. Geometry of memory is irrelevant.
 If we want to compute A then B then C, the logical linearity of the program must be
 consistent with the address linearity. A must be stored at address x, B at x+1, C at x+2.
@@ -15,7 +15,7 @@ The position of memory cells in space does not affect the execution order. Cell 
 can be spatially distant but as they are linear with respect to address they execute in order.
 So meaning lives in arbitrary numeric adresses not space.
 
-TOPOCORE:
+Topocore:
 The logical linearity is encoded in space itself. if we want to execute A then B then C, they must
 be spatially placed in that order. The logical linearity must be consistent with topology. Change in
 position of cell changes the execution order. So meaning lives in space itself not arbitrary address.
