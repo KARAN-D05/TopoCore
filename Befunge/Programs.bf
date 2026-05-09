@@ -50,3 +50,12 @@ v
    "
    ,
    @
+
+
+; Prints Karan
+; The reverse order gives correct printing order
+; K is pushed last but popped first, then a then r then a and then n
+; Grid:
+; (0,0)=" (1,0)=n (2,0)=a (3,0)=r (4,0)=a (5,0)=K (6,0)=" (7,0)=, (8,0)=, (9,0)=, (10,0)=, (11,0)=, (12,0)=@
+
+"naraK",,,,,@
