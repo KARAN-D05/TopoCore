@@ -1,7 +1,7 @@
 # Spatial Semantics - Why TopoCore is Semasiographic
 
 ## Criticism 1
-2D CPU initially looks like a more complicared way of organizing logical linearity of computation.
+2D CPU initially looks like a more complicated way of organizing logical linearity of computation.
 
 ```
 Computation is sequential at its core so logical linearity always stays. What differs is how we encode that linearity.
