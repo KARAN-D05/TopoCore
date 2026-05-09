@@ -156,12 +156,14 @@ Most are hybrid.
 
 ## The Motivation Spectrum
 
+```
 Signs exist on a spectrum from fully arbitrary to fully iconic:
 Fully arbitrary ←————————————————————→ Fully iconic
 R                          |                    >
 means right         means vertical      means right
 by convention       movement partly     by resemblance
                       by shape
+```
 
 The further right on the spectrum the more readable without a reference.
 The further left the more memorization required.
