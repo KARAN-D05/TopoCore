@@ -52,6 +52,17 @@ v
    @
 
 
+; Stack Manipulation
+35:..@    ; duplicate - prints 5 5
+35\..@    ; swap - prints 3 5
+35$..@    ; discard - prints 3 0
+3!.@      ; NOT - prints 0
+95`.@     ; greater than - prints 1
+
+
+"A"#.,@   ; skips . lands on , prints A
+
+
 ; Prints Karan
 ; The reverse order gives correct printing order
 ; K is pushed last but popped first, then a then r then a and then n
