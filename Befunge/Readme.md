@@ -94,10 +94,10 @@ All instructions must lie on the path the cursor actually travels.
 | Command | Action |
 |---------|--------|
 | `:` | Duplicate top of stack |
-| `\\` | Swap top two values |
+| `\` | Swap top two values |
 | `$` | Pop and discard top value |
-| `!` | Logical NOT — 0 becomes 1, nonzero becomes 0 |
-| `` ` `` | Greater than — push 1 if second > top, else push 0 |
+| `!` | Logical NOT - 0 becomes 1, nonzero becomes 0 |
+| `` ` `` | Greater than - push 1 if second > top, else push 0 |
 
 ## Core Spatial Thinking Rule
 
