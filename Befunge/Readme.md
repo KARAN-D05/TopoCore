@@ -82,8 +82,8 @@ All instructions must lie on the path the cursor actually travels.
 ### Conditional Direction
 | Command | Action |
 |---------|--------|
-| `_` | Pop stack — go right if 0, go left if nonzero |
-| `\|` | Pop stack — go down if 0, go up if nonzero |
+| `_` | Pop stack - go right if 0, go left if nonzero |
+| `\|` | Pop stack - go down if 0, go up if nonzero |
 
 ### String Mode
 | Command | Action |
