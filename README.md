@@ -7,7 +7,7 @@
 ![Befunge](https://img.shields.io/badge/Befunge-FFFFFF?style=for-the-badge&logoColor=black)
 ![Python](https://img.shields.io/badge/Python-306998?style=for-the-badge&logoColor=white)
 ![C](https://img.shields.io/badge/C-5C6BC0?style=for-the-badge&logoColor=white)
-![System-Verilog](https://img.shields.io/badge/SystemVerilog-FF9800?style=for-the-badge&logoColor=white)
+![SystemVerilog](https://img.shields.io/badge/SystemVerilog-FF9800?style=for-the-badge&logoColor=white)
 
 ## What is TopoCore?
 
