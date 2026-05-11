@@ -4,8 +4,6 @@
 
 ## ⚙️ Implementation Stack
 ![Brainfuck](https://img.shields.io/badge/Brainfuck-212121?style=for-the-badge&logoColor=white)
-![Befunge](https://img.shields.io/badge/Befunge-FFFFFF?style=for-the-badge&logoColor=black)
-![Befunge](https://img.shields.io/badge/Befunge-F2F2F2?style=for-the-badge&logoColor=black)
 ![Befunge](https://img.shields.io/badge/Befunge-EFEFEF?style=for-the-badge&logoColor=black)
 ![Python](https://img.shields.io/badge/Python-00B0FF?style=for-the-badge)
 ![C](https://img.shields.io/badge/C-5C6BC0?style=for-the-badge&logoColor=white)
