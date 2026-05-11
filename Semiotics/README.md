@@ -223,7 +223,7 @@ of native language.
 The system assigns signs to primitive human concepts. Signs combine logically
 and visually to build complex meaning.
 
-![Blissymbols Chart](images/blissymbols_chart.png)
+![Blissymbols Chart](images/blissymbols.png)
 
 Combinations follow visual and logical rules not phonetic ones. Meaning
 is built compositionally from simpler marks.
