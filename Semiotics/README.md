@@ -225,13 +225,10 @@ and visually to build complex meaning.
 
 ![Blissymbols Chart](images/blissymbols_chart.png)
 
-```
-♡       = feeling
-| + ♡   = happy person
-```
-
 Combinations follow visual and logical rules not phonetic ones. Meaning
 is built compositionally from simpler marks.
+
+| + ♡   = happy person
 
 Blissymbols is used today for augmentative communication with people who
 cannot speak, it remains one of the most complete semasiographic systems
