@@ -124,9 +124,11 @@ This is the direct hardware model for Topocore's execution engine.
 ## Edge Behaviour
 The grid is toroidal - edges wrap around.
 
+```
 Left edge → wraps to right edge of same row
 Right edge → wraps to left edge of same row
 Top edge → wraps to bottom edge of same column
 Bottom edge → wraps to top edge of same column
+```
 
 > Befunge's execution model is the direct blueprint for Topocore's RTL architecture.
