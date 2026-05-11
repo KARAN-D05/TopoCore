@@ -21,7 +21,7 @@ be spatially placed in that order. The logical linearity must be consistent with
 position of cell changes the execution order. So meaning lives in space itself not arbitrary address.
 
 ### The Semasiographic Conclusion
-Semasiography means meaning is encoded in spatial arrangement rather than arbitrary symbols.
+Semasiography means meaning is encoded in signs/spatial arrangement rather than arbitrary symbols.
 Normal CPU programs are not semasiographic, their visual layout is a representation
 artifact, not a semantic one. The geometry is incidental.
 Topocore programs are semasiographic, their geometry is constitutive.
