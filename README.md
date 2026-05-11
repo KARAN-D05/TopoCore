@@ -53,7 +53,7 @@ The project explores:
 - symbolic systems,
 - and unconventional hardware architecture.
 
-> The semasiographic argument and the cosmetic topology criticism are addressed in [Spatial Semantics](Spatial%20Semantics).
+#### > The semasiographic argument and the cosmetic topology criticism are addressed in [Spatial Semantics](Spatial%20Semantics).
 
 ## Goals
 
