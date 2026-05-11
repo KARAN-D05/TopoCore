@@ -230,7 +230,11 @@ and visually to build complex meaning.
 ♡ + /\  = home the feeling of house
 ```
 
-![Blissymbols Chart](images/blissymbols_chart.png)
+<p align="center">
+  <img src="images/blissymbols_chart" width="500"/>
+  <br>
+  <sub><b>Blissymbols Chart</sub>
+</p>
 
 Combinations follow visual and logical rules not phonetic ones. Meaning
 is built compositionally from simpler marks.
