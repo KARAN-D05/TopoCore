@@ -76,17 +76,6 @@ The project explores:
 
 > Teaching a machine to read meaning from space.
 
-## Roadmap
-
-```
-Phase 1 — Foundations     ████████████░░░░░░░░  In progress
-Phase 2 — Theory          ████████░░░░░░░░░░░░  In progress  
-Phase 3 — Interpreters    ░░░░░░░░░░░░░░░░░░░░  Planned
-Phase 4 — Glyph System    ░░░░░░░░░░░░░░░░░░░░  Planned
-Phase 5 — Hardware        ░░░░░░░░░░░░░░░░░░░░  Planned
-Phase 6 — FPGA            ░░░░░░░░░░░░░░░░░░░░  Planned
-```
-
 ## Status
 
 - [x] Brainfuck - complete language study, programs, hardware mapping
