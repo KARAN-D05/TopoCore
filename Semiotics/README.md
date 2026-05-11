@@ -223,10 +223,12 @@ of native language.
 The system assigns signs to primitive human concepts. Signs combine logically
 and visually to build complex meaning.
 
+```
 ♡       = feeling
 | + ♡   = happy person
 /\      = house
 ♡ + /\  = home the feeling of house
+```
 
 ![Blissymbols Chart](images/blissymbols_chart.png)
 
