@@ -231,7 +231,7 @@ and visually to build complex meaning.
 ```
 
 <p align="center">
-  <img src="images/blissymbols_chart" width="500"/>
+  <img src="images/blissymbols_chart.png" width="500"/>
   <br>
   <sub><b>Blissymbols Chart</sub>
 </p>
