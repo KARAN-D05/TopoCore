@@ -80,7 +80,7 @@ The project explores:
 
 - [x] Brainfuck - complete language study, programs, hardware mapping
 - [x] Befunge-93 - complete language study, programs, hardware mapping
-- [x] Theory - spatial semantics, semiotic analysis
+- [ ] Theory - spatial semantics, semiotics
 - [ ] Interpreters - Python and C
 - [ ] Glyph system design
 - [ ] Hardware architecture
