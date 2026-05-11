@@ -53,6 +53,8 @@ The project explores:
 - symbolic systems,
 - and unconventional hardware architecture.
 
+> The semasiographic argument and the cosmetic topology criticism are addressed in [Spatial Semantics](Spatial Semantics).
+
 ## Goals
 
 - Learn minimal computation through Brainfuck
@@ -63,3 +65,7 @@ The project explores:
 - Explore symbolic and spatial computation systems
 
 > Teaching a machine to read meaning from space.
+
+## 📜License
+- Source code and HDL files are licensed under the MIT License.
+- Documentation, diagrams, images, and PDFs are licensed under Creative Commons Attribution 4.0 (CC BY 4.0).
