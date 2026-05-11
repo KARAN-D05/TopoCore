@@ -25,6 +25,20 @@ Unlike traditional CPUs that execute instructions linearly using a single progra
 Execution is no longer a straight line.  
 Programs are treated as symbolic spaces through which computation moves.
 
+## The Core Argument
+
+Normal CPUs encode logical flow through address order.
+Geometry of memory is incidental. Two consecutive addresses
+can be physically distant and execution is unaffected.
+
+Topocore encodes logical flow through spatial continuity.
+Geometry is constitutive. Position determines execution.
+
+This makes Topocore programs `semasiographic` - meaning lives
+in spatial arrangement, not in arbitrary symbolic addressing.
+
+> The semasiographic argument and the cosmetic topology criticism are addressed in [Spatial Semantics](Spatial%20Semantics).
+
 ## Why?
 
 Modern processors follow a fundamentally linear execution model:
@@ -53,8 +67,6 @@ The project explores:
 - symbolic systems,
 - and unconventional hardware architecture.
 
-> The semasiographic argument and the cosmetic topology criticism are addressed in [Spatial Semantics](Spatial%20Semantics).
-
 ## Goals
 
 - Learn minimal computation through Brainfuck
@@ -65,6 +77,17 @@ The project explores:
 - Explore symbolic and spatial computation systems
 
 > Teaching a machine to read meaning from space.
+
+## Status
+
+- [x] Brainfuck - complete language study, programs, hardware mapping
+- [x] Befunge-93 - complete language study, programs, hardware mapping
+- [x] Theory - spatial semantics, semiotic analysis
+- [ ] Interpreters - Python and C
+- [ ] Glyph system design
+- [ ] Hardware architecture
+- [ ] SystemVerilog implementation
+- [ ] FPGA synthesis and visualization
 
 ## 📜License
 - Source code and HDL files are licensed under the MIT License.
