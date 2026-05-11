@@ -29,10 +29,10 @@ Normal CPUs encode logical flow through address order.
 Geometry of memory is incidental. Two consecutive addresses
 can be physically distant and execution is unaffected.
 
-Topocore encodes logical flow through spatial continuity.
+TopoCore encodes logical flow through spatial continuity.
 Geometry is constitutive. Position determines execution.
 
-This makes Topocore programs `semasiographic` - meaning lives
+This makes TopoCore programs `semasiographic` - meaning lives
 in spatial arrangement, not in arbitrary symbolic addressing.
 
 > The semasiographic argument and the cosmetic topology criticism are addressed in [Spatial Semantics](Spatial%20Semantics).
