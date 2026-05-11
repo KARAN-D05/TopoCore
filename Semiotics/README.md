@@ -186,3 +186,152 @@ This is not just aesthetic. It connects directly to the semasiographic
 argument - if meaning lives in spatial arrangement and in the shapes of
 the marks themselves, then the program becomes more self-explanatory.
 The layout and the glyphs together carry the full meaning.
+
+# Semasiography
+
+## What Is Semasiography
+
+Semasiography is writing that encodes meaning directly in signs bypassing
+spoken language entirely. The marks connect directly to concepts in the mind,
+not to intermediate sounds. A semasiographic system is readable regardless
+of native spoken language because no phonetic encoding is involved.
+
+Contrast with phonography - writing that encodes sounds of a spoken language.
+English, Hindi, Arabic are phonographic. You can read them aloud without
+understanding them because the marks encode sounds, not meanings.
+
+## Mathematical Notation 
+∫₀^∞ e^(-x²) dx = √π / 2
+
+A mathematician in Tokyo, Cairo, São Paulo, and Delhi read this identically.
+No translation. No ambiguity. Perfect meaning transfer across language boundaries.
+
+Every mark connects directly to a mathematical concept not to a sound.
+`∫` does not sound like anything. `√` encodes no phoneme. They are pure
+concept-marks. This is semasiography at its most powerful.
+
+Limitation is mathematical notation only works for mathematical concepts.
+Its semasiographic power is deep but narrow.
+
+## Blissymbols - Attempted Universal Semasiography
+
+Charles Bliss was an Austrian Jewish engineer who survived the Holocaust.
+Convinced that human conflict was partly caused by language barriers, he
+spent years designing a universal writing system readable by anyone regardless
+of native language.
+
+The system assigns signs to primitive human concepts. Signs combine logically
+and visually to build complex meaning.
+
+♡       = feeling
+| + ♡   = happy person
+/\      = house
+♡ + /\  = home the feeling of house
+
+![Blissymbols Chart](images/blissymbols_chart.png)
+
+Combinations follow visual and logical rules not phonetic ones. Meaning
+is built compositionally from simpler marks.
+
+Blissymbols is used today for augmentative communication with people who
+cannot speak, it remains one of the most complete semasiographic systems
+ever designed for general human communication.
+
+Design lesson for Topocore - primitive marks for basic concepts, logical
+and iconic combination rules for complex concepts.
+
+## Dongba Script - The Last Living Pictographic System
+
+The Naxi people of Yunnan province in southwestern China maintained a
+writing system for over a thousand years used by their priests, Dongba -
+for religious rituals and ceremonies.
+
+Dongba script is historically significant because it is the last living
+pictographic writing system actively used by human beings. Every other
+pictographic system died or evolved into abstraction thousands of years ago.
+
+Concepts are drawn as pictures. A man walking is drawn as a figure in motion.
+Fire is drawn as flames. Over centuries some marks became more abstract while
+retaining traces of their original pictographic form making Dongba a living
+record of the transition from fully iconic to partially abstract writing.
+
+## The Universal Evolution Pattern
+
+```
+Fully iconic picture
+          ↓
+Simplified iconic mark
+          ↓
+Partially abstract glyph
+          ↓
+Fully arbitrary symbol
+```
+
+English letters were pictures once. The letter A was originally an ox head -
+aleph in Phoenician, rotated and abstracted over millennia into A.
+Chinese characters show the same evolution.
+Egyptian hieroglyphics began as pictures and became increasingly abstract.
+
+Writing systems drift toward abstraction because abstraction is faster to
+write and easier to standardize. But abstraction costs iconic readability.
+
+## Reading Behavior vs System Design
+
+An important distinction raised during study:
+
+After years of exposure to a phonographic system skilled readers develop
+direct access, seeing a word and knowing its meaning instantly without
+subvocalizing sounds. The phonological route becomes optional.
+
+Brain imaging confirms this. Expert readers activate the visual word form
+area directly  bypassing phonological processing for familiar words.
+
+So a phonographic system can functionally behave like a semasiographic one
+for the skilled reader. But the system design remains phonographic. If you
+encounter an unfamiliar word you immediately try to sound it out, the
+phonographic scaffolding reveals itself when direct access fails.
+
+Semasiographic systems have no such fallback. Meaning is the only route.
+
+Implication for Topocore - iconic glyphs serve both the newcomer who reads
+meaning from shape and the expert who has developed direct access. Arbitrary
+symbols only serve the expert. Iconic design is strictly better.
+
+## Where Befunge Sits
+
+Befunge is proto-semasiographic.
+
+It uses spatial arrangement as its primary semantic substrate - execution
+path is determined by position and direction, not by arbitrary address order.
+The program bypasses spoken language entirely. You need not know any human
+language to trace a Befunge program.
+
+But Befunge inherits symbolic baggage from ASCII. The digit 3 pushes 3
+because we learned that from our number system. The + means addition because
+we learned that from mathematics. These are not iconic by Befunge's own
+design they are inherited conventions.
+
+Befunge sits between semasiography and phonography, leaning toward
+semasiography but not fully achieving it.
+
+## Where Topocore Aims
+
+Topocore completes the semasiographic move that Befunge begins.
+
+By replacing inherited ASCII symbols with purpose-designed iconic glyphs
+where shape encodes meaning directly. Topocore makes the instruction set
+itself semasiographic, not just the spatial arrangement.
+
+The precise statement:
+
+> Befunge is proto-semasiographic as it uses spatial arrangement as its
+> primary semantic substrate but inherits symbolic baggage from ASCII.
+> Topocore completes the semasiographic move by replacing inherited symbols
+> with purpose-designed iconic glyphs.
+
+Two layers of semasiography:
+1. Spatial arrangement determines execution - inherited from Befunge
+2. Glyph shapes encode meaning iconically - Topocore's original contribution
+
+Together they make Topocore the most fully semasiographic computational
+system designed at the hardware level.
