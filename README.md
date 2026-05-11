@@ -7,7 +7,7 @@
 ![Befunge](https://img.shields.io/badge/Befunge-EFEFEF?style=for-the-badge&logoColor=black)
 ![Python](https://img.shields.io/badge/Python-00B0FF?style=for-the-badge)
 ![C](https://img.shields.io/badge/C-5C6BC0?style=for-the-badge&logoColor=white)
-![SystemVerilog](https://img.shields.io/badge/System%20Verilog-FFEA00?style=for-the-badge&logoColor=white)
+![SystemVerilog](https://img.shields.io/badge/SystemVerilog-FFEA00?style=for-the-badge&logoColor=white)
 ![Logisim Circuits](https://img.shields.io/badge/Logisim%20Circuits-00C853?style=for-the-badge)
 
 ## What is TopoCore?
@@ -70,7 +70,7 @@ The project explores:
 - Learn minimal computation through Brainfuck
 - Study spatial execution through Befunge
 - Build a software interpreter
-- Implement a Verilog-based execution engine
+- Implement a SystemVerilog-based execution engine
 - Design a direction-aware control architecture
 - Explore symbolic and spatial computation systems
 
