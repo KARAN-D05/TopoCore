@@ -336,3 +336,103 @@ Two layers of semasiography:
 
 Together they make Topocore the most fully semasiographic computational
 system designed at the hardware level.
+
+## Visual Analysis - Three Reference Systems
+
+### The Alphabet Evolution - Iconic to Symbolic Drift
+
+The evolution of the English alphabet from Proto-Sinaitic c.1750 BCE to
+Modern English shows the universal trajectory of writing systems
+from fully iconic to fully symbolic over approximately 3000 years.
+
+Proto-Sinaitic marks were pictures. A fish looked like a fish. A hand
+looked like a hand. The signifier resembled the signified directly.
+
+Modern English letters retain almost no iconic trace. The letter D
+descends from a fish - remove the tail, fins, and mouth and the curve
+remains. The letter K descends from a mark resembling a boiling vessel
+or flame, the diagonal strokes remain but the iconic origin is
+unrecognizable without the evolutionary chart.
+
+This drift happened not by design but by pressure:
+- Writing speed demanded simpler strokes
+- Standardization across regions flattened regional variations
+- Tool constraints - stylus, pen, chisel pushed toward geometrically
+  simple forms
+
+Nobody decided to make D look less like a fish. It drifted.
+
+### Blissymbols - Minimal Iconicity
+
+Blissymbols uses reduced iconic forms. Each primitive retains the
+minimum visual information needed to trigger the correct concept -
+nothing more.
+
+The eye symbol is two concentric circles. A real eye has exactly this
+structure - iris and pupil as concentric circles. Every other feature
+of the eye - eyelashes, eyelids, color is stripped away. Only the
+most visually distinctive and uniquely identifying feature remains.
+
+The fish symbol is an ellipse with crossing lines suggesting fins.
+Not a detailed drawing of a fish, just the essential shape that
+uniquely identifies fish as distinct from all other concepts.
+
+This design principle is called **minimal iconicity**:
+
+> Keep only the visual feature that uniquely identifies the concept.
+> Remove everything else.
+
+Why this works:
+- Fast to write and render
+- Unambiguous - the essential feature discriminates from other concepts
+- Still iconic enough to be readable without a reference table
+- Standardizable - the reduced form is consistent across writers
+
+**Implication for Topocore** - minimal iconicity is the correct design
+target for glyphs. Not full pictographic representation like Dongba.
+Not arbitrary abstraction like ASCII. The minimum iconic form that
+uniquely identifies each opcode.
+
+### Dongba Script - Full Pictographic Representation
+
+Dongba script takes the opposite approach to Blissymbols. Rather than
+abstracting to a minimal form, Dongba tries to represent the signified
+as completely as possible - full figures, postures, colors, spatial
+relationships between elements.
+
+A person is drawn as a complete human figure with posture conveying
+meaning. Animals are drawn with identifying features intact. Scenes
+are composed pictographically with spatial arrangement carrying
+narrative meaning.
+
+Comparison:
+
+| Property | Dongba | Blissymbols |
+|----------|--------|-------------|
+| Iconic fidelity | Very high | Moderate |
+| Writing speed | Slow | Fast |
+| Ambiguity | Low | Low |
+| Learnability | High - looks exactly like things | High - looks like reduced things |
+| Standardization | Difficult - full figures vary | Easier - reduced forms are consistent |
+
+Dongba is historically significant not as a design model but as
+evidence as it shows that fully pictographic systems can survive
+for over a thousand years and remain readable. Iconicity is not
+inherently unstable. Drift toward abstraction is a pressure, not
+an inevitability.
+
+**Implication for Topocore** - Dongba proves iconic systems are
+viable long term. Blissymbols shows how to make them practical.
+Topocore combines both lessons - viable iconic glyphs designed
+at minimal iconicity.
+
+### The Core Design Rule Derived From All Three
+
+Looking across the alphabet evolution, Blissymbols, and Dongba
+a single design principle emerges for Topocore's glyph system:
+
+> Keep only the visual feature that uniquely identifies the concept.
+> Remove everything else.
+> Design deliberately - do not let the system drift toward arbitrary
+> abstraction.
+> Resist the entropy that turned fish into D.
