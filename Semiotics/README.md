@@ -247,6 +247,8 @@ Dongba script is historically significant because it is the last living
 pictographic writing system actively used by human beings. Every other
 pictographic system died or evolved into abstraction thousands of years ago.
 
+![Dongba Script](images/dongba_script.png)
+
 Concepts are drawn as pictures. A man walking is drawn as a figure in motion.
 Fire is drawn as flames. Over centuries some marks became more abstract while
 retaining traces of their original pictographic form making Dongba a living
@@ -268,6 +270,8 @@ English letters were pictures once. The letter A was originally an ox head -
 aleph in Phoenician, rotated and abstracted over millennia into A.
 Chinese characters show the same evolution.
 Egyptian hieroglyphics began as pictures and became increasingly abstract.
+
+![English Letters Evolution](images/english_alphabet_evolution.png)
 
 Writing systems drift toward abstraction because abstraction is faster to
 write and easier to standardize. But abstraction costs iconic readability.
