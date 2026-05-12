@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopoCore Spatial Execution Simulator</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --grid-bg: #161b22;
+            --cell-bg: #21262d;
+            --cell-border: #30363d;
+            --text-main: #c9d1d9;
+            --highlight: #58a6ff;
+            --cursor-color: rgba(88, 166, 255, 0.4);
+            --cursor-border: #58a6ff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 4px;
+            background-color: var(--grid-bg);
+            padding: 8px;
+            border-radius: 8px;
+            border: 1px solid var(--cell-border);
+            aspect-ratio: 1;
+        }
+
+        .cell {
+            background-color: var(--cell-bg);
+            border: 1px solid var(--cell-border);
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            user-select: none;
+            transition: all 0.1s;
+        }
+
+        .cell:hover {
+            background-color: #30363d;
+        }
+
+        .cell.cursor {
+            background-color: var(--cursor-color);
+            border-color: var(--cursor-border);
+            box-shadow: 0 0 10px rgba(88, 166, 255, 0.5);
+            z-index: 10;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 24px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            background-color: #21262d;
+            color: var(--text-main);
+            border: 1px solid var(--cell-border);
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background-color: #30363d;
+            border-color: #8b949e;
+        }
+
+        button.primary {
+            background-color: #238636;
+            color: #ffffff;
+            border-color: rgba(240, 246, 252, 0.1);
+        }
+
+        button.primary:hover {
+            background-color: #2ea043;
+        }
+
+        .status {
+            text-align: center;
+            margin-top: 16px;
+            font-family: monospace;
+            font-size: 16px;
+            color: #8b949e;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h2>TopoCore Execution Engine</h2>
+        <p>Click cells to place directional instructions. Watch spatial control flow in action.</p>
+    </div>
+
+    <div class="grid" id="grid"></div>
+
+    <div class="status" id="status">
+        Pos: (0, 0) | Dir: Right
+    </div>
+
+    <div class="controls">
+        <button class="primary" id="btn-play">Play</button>
+        <button id="btn-step">Step</button>
+        <button id="btn-reset">Reset Cursor</button>
+        <button id="btn-clear">Clear Grid</button>
+    </div>
+</div>
+
+<script>
+    const GRID_SIZE = 8;
+    // Map of logical states to unicode arrows
+    const STATES = ['', '→', '↓', '←', '↑'];
+    const DIR_MAP = {
+        '→': { dx: 1, dy: 0, name: 'Right' },
+        '↓': { dx: 0, dy: 1, name: 'Down' },
+        '←': { dx: -1, dy: 0, name: 'Left' },
+        '↑': { dx: 0, dy: -1, name: 'Up' }
+    };
+
+    let gridData = Array(GRID_SIZE).fill().map(() => Array(GRID_SIZE).fill(''));
+    let cursor = { x: 0, y: 0, dir: '→' };
+    let isPlaying = false;
+    let playInterval;
+
+    const gridEl = document.getElementById('grid');
+    const statusEl = document.getElementById('status');
+    const btnPlay = document.getElementById('btn-play');
+
+    // Initialize an example loop
+    function initDefaultPath() {
+        for(let i = 1; i < 7; i++) {
+            gridData[1][i] = '→'; // Top edge
+            gridData[6][i] = '←'; // Bottom edge
+            gridData[i][6] = '↓'; // Right edge
+            gridData[i][1] = '↑'; // Left edge
+        }
+        gridData[1][6] = '↓'; // Top right corner
+        gridData[6][6] = '←'; // Bottom right corner
+        gridData[6][1] = '↑'; // Bottom left corner
+        gridData[1][1] = '→'; // Top left corner
+    }
+
+    function renderGrid() {
+        gridEl.innerHTML = '';
+        for (let y = 0; y < GRID_SIZE; y++) {
+            for (let x = 0; x < GRID_SIZE; x++) {
+                const cell = document.createElement('div');
+                cell.className = 'cell';
+                if (cursor.x === x && cursor.y === y) {
+                    cell.classList.add('cursor');
+                }
+                cell.textContent = gridData[y][x];
+                
+                // Click to cycle states
+                cell.addEventListener('click', () => {
+                    let currentStateIdx = STATES.indexOf(gridData[y][x]);
+                    let nextStateIdx = (currentStateIdx + 1) % STATES.length;
+                    gridData[y][x] = STATES[nextStateIdx];
+                    renderGrid();
+                });
+                
+                gridEl.appendChild(cell);
+            }
+        }
+        updateStatus();
+    }
+
+    function updateStatus() {
+        const dirName = DIR_MAP[cursor.dir].name;
+        statusEl.textContent = `Pos: (${cursor.x}, ${cursor.y}) | Dir: ${dirName}`;
+    }
+
+    function step() {
+        // 1. Read current cell
+        const currentInstruction = gridData[cursor.y][cursor.x];
+        if (currentInstruction !== '') {
+            cursor.dir = currentInstruction; // Change direction based on topology
+        }
+
+        // 2. Move (with toroidal wrap-around to keep it on board)
+        const move = DIR_MAP[cursor.dir];
+        cursor.x = (cursor.x + move.dx + GRID_SIZE) % GRID_SIZE;
+        cursor.y = (cursor.y + move.dy + GRID_SIZE) % GRID_SIZE;
+
+        renderGrid();
+    }
+
+    function togglePlay() {
+        isPlaying = !isPlaying;
+        if (isPlaying) {
+            btnPlay.textContent = "Pause";
+            btnPlay.classList.remove('primary');
+            playInterval = setInterval(step, 250);
+        } else {
+            btnPlay.textContent = "Play";
+            btnPlay.classList.add('primary');
+            clearInterval(playInterval);
+        }
+    }
+
+    // Event Listeners
+    btnPlay.addEventListener('click', togglePlay);
+    document.getElementById('btn-step').addEventListener('click', () => {
+        if (!isPlaying) step();
+    });
+    
+    document.getElementById('btn-reset').addEventListener('click', () => {
+        if (isPlaying) togglePlay();
+        cursor = { x: 0, y: 0, dir: '→' };
+        renderGrid();
+    });
+
+    document.getElementById('btn-clear').addEventListener('click', () => {
+        if (isPlaying) togglePlay();
+        gridData = Array(GRID_SIZE).fill().map(() => Array(GRID_SIZE).fill(''));
+        cursor = { x: 0, y: 0, dir: '→' };
+        renderGrid();
+    });
+
+    // Boot up
+    initDefaultPath();
+    renderGrid();
+</script>
+</body>
+</html>
