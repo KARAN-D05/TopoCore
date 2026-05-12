@@ -31,12 +31,12 @@ Programs are treated as symbolic spaces through which computation moves.
     </b> Spatial Execution
 </p>
 
-## Interactive Demo
+### Interactive Demo
 
 See spatial execution in action - place direction glyphs on a grid
 and watch the cursor travel through space constrained by locality.
 
-[Try the demo](Spatial-Execution-Visualization.html)
+> [Try the demo](Spatial-Execution-Visualization.html)
 
 ## The Core Argument
 
