@@ -23,6 +23,14 @@ Unlike traditional CPUs that execute instructions linearly using a single progra
 Execution is no longer a straight line.  
 Programs are treated as symbolic spaces through which computation moves.
 
+<p align="center">
+  <img src="Semiotics/images/Spatial-Execution-Visualization.gif"  width="1500">
+</p>
+
+<p align="center">
+   <sub></b> Spatial Execution with enforced Locality
+</p>
+
 ## The Core Argument
 
 Normal CPUs encode logical flow through address order.
