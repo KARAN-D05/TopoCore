@@ -24,7 +24,7 @@ Execution is no longer a straight line.
 Programs are treated as symbolic spaces through which computation moves.
 
 <p align="center">
-  <img src="Semiotics/images/Spatial-Execution-Visualization.gif"  width="1500">
+  <img src="Semiotics/images/Spatial-Execution-Visualization.gif"  width="500">
 </p>
 
 <p align="center">
