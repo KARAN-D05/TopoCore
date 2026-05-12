@@ -426,7 +426,7 @@ at minimal iconicity.
 
 ### The Core Design Rule Derived From All Three
 
-Looking across the alphabet evolution, Blissymbols, and Dongba
+Looking across the alphabet evolution, Blissymbols, and Dongba,
 a single design principle emerges for Topocore's glyph system:
 
 > Keep only the visual feature that uniquely identifies the concept.
