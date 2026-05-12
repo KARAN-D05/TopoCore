@@ -431,6 +431,5 @@ a single design principle emerges for Topocore's glyph system:
 
 > Keep only the visual feature that uniquely identifies the concept.
 > Remove everything else.
-> Design deliberately - do not let the system drift toward arbitrary
-> abstraction.
+> Design deliberately - do not let the system drift toward arbitrary abstraction.
 > Resist the entropy that turned fish into D.
