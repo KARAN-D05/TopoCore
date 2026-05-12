@@ -115,8 +115,6 @@ In Topocore locality is not a feature. It is the foundation of meaning.
 
 If Glyphs Are Arbitrary, Does The Semasiographic Claim Break?
 
-The semasiographic argument for Topocore emphasises iconic glyphs -
-direction arrows, shape-encoded operations, visually motivated marks.
 But what if the glyph system uses purely arbitrary non-phonetic symbols?
 
 For example:
