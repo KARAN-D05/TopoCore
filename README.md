@@ -24,11 +24,11 @@ Execution is no longer a straight line.
 Programs are treated as symbolic spaces through which computation moves.
 
 <p align="center">
-  <img src="Semiotics/images/Spatial-Execution-Visualization.gif"  width="300">
+  <img src="Semiotics/images/Spatial-Execution-Visualization.gif"  width="400">
 </p>
 
 <p align="center">
-   <sub></b> Spatial Execution with enforced Locality
+    </b> Spatial Execution with enforced Locality
 </p>
 
 ## The Core Argument
