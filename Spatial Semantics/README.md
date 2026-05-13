@@ -230,9 +230,6 @@ but is not load-bearing for the semasiographic claim itself.
 
 ## Criticism 4 
 
-Jumps and Arbitrary Addressing Break Semasiography
-And Drawing A Line To The Target Does Not Fix It
-
 Normal CPUs use jump instructions to implement control flow like branches,
 loops, function calls. Could a normal CPU be made semasiographic by
 visualizing these jumps spatially by drawing arrows from jump instructions
@@ -301,7 +298,7 @@ You do not draw the path. You read it. It is already there.
 
 **The interactive demo proves this empirically**
 
-The [spatial execution visualizer](../Spatial-Execution-Visualizer) demonstrates this claim observably.
+The [spatial execution visualizer](../Spatial-Execution-Visualization.html) demonstrates this claim observably.
 Place direction glyphs and watch the cursor walk every cell of its path.
 There is no moment where it disappears and reappears. The full path is
 always visible in the grid before execution begins. This is not a
