@@ -227,3 +227,125 @@ but is not load-bearing for the semasiographic claim itself.
 > It does not require iconicity.
 > Topocore is semasiographic with or without iconic glyphs.
 > Iconicity makes it better not different in kind.
+
+## Criticism 4 
+
+Jumps and Arbitrary Addressing Break Semasiography
+And Drawing A Line To The Target Does Not Fix It
+
+Normal CPUs use jump instructions to implement control flow — branches,
+loops, function calls. Could a normal CPU be made semasiographic by
+visualizing these jumps spatially — drawing arrows from jump instructions
+to their targets?
+
+This criticism argues no and that the failure is architectural, not
+cosmetic.
+
+### The Argument Against Normal CPU Semasiography
+
+**1. Jumps do not traverse space**
+
+A jump instruction teleports the program counter from one location to
+another with no intermediate steps. Execution disappears from one address
+and reappears at another. The spatial layout between those two points is
+never visited. There is no continuous path from the jump to its destination,
+only two disconnected points connected by an invisible teleport.
+
+**2. Arbitrary addressing requires an inference layer**
+
+To follow a jump you must know the target address - for example 1000.
+That number is arbitrary. It has no inherent spatial relationship to the
+current position. You cannot look at the layout and see where the jump goes
+unless you already know what address 1000 means.
+
+This extra layer of symbolic mapping - address number to spatial location
+breaks the core requirement of semasiography that meaning be directly
+readable from spatial arrangement alone. An inference step is required.
+Inference is not reading. Inference is decoding.
+
+**3. Drawing a line is not a solution**
+
+A human can mentally draw a line from the jump instruction to the target
+cell. But that line is not part of the program's own semantics. It is an
+external annotation added by the observer. The program itself contains no
+such path. Execution does not walk it.
+
+Moreover to draw the line you still need the target address which is
+an arbitrary inference. The line does not remove the inference layer.
+It papers over it with a visual that depends on the same arbitrary mapping
+it was supposed to replace.
+
+**4. Zero-sum game**
+
+The combination of teleportation and arbitrary addressing makes normal
+CPUs incapable of semasiography. Any attempt to spatialize jumps by
+drawing arrows or using labels still relies on an external mapping that
+is not inherent in the geometry. The visualization is always an
+annotation never the program itself.
+
+### Why TopoCore Satisfies Semasiography
+
+**No jumps - no teleportation - no inference layer**
+
+TopoCore has no jump instructions. The only way to change position is
+by moving one step to a neighboring cell in the current direction.
+There is no teleportation. There is no address-based target. There is
+no inference layer. Every transition from one instruction to the next
+corresponds to an actual adjacency in the grid.
+
+**The path is physically present**
+
+The program's spatial layout shows the entire execution flow. Direction
+glyphs indicate turns. Adjacent cells indicate sequential steps. Cycles
+are visible as closed loops in the grid. Branches are visible as forks
+where conditional direction commands send the cursor one of two ways.
+
+You do not draw the path. You read it. It is already there.
+
+**The interactive demo proves this empirically**
+
+The [spatial execution visualizer](../Spatial-Executi0n-Visualizer) demonstrates this claim observably.
+Place direction glyphs and watch the cursor walk every cell of its path.
+There is no moment where it disappears and reappears. The full path is
+always visible in the grid before execution begins. This is not a
+theoretical claim, it is observable behavior.
+
+**Semasiography is satisfied**
+
+Meaning is conveyed directly through spatial arrangement - adjacency,
+cycles, forks and through non-phonetic glyphs. No additional inference
+is required. No address mapping. No external annotation. The layout is
+the program. The program is the layout.
+
+### The Precise Distinction
+
+| | Normal CPU | TopoCore |
+|---|---|---|
+| Control flow mechanism | Jump to arbitrary address | Walk to adjacent cell |
+| Path visibility | Invisible - teleportation | Visible - physical adjacency |
+| Inference required | Yes - address to location mapping | No - adjacency is self-evident |
+| Visualization fixes it | No - annotation not semantics | N/A - path already present |
+| Semasiographic | No | Yes |
+
+### Final Statement
+
+> A normal CPU cannot be semasiographic because jumps and arbitrary
+> addressing force an inference layer - the address number that is
+> not readable from spatial layout alone. Drawing a line from a jump
+> to its target does not remove that layer. It adds an external
+> annotation that still depends on the same arbitrary mapping.
+>
+> TopoCore removes both jumps and arbitrary addressing, replacing them
+> with locality-enforced walking. The spatial layout directly is the
+> execution flow. No inference needed. No annotation required.
+> The path is not drawn it is read.
+
+### Placement Note
+
+This criticism stands alone but sharpens Criticism 1 - the original
+concern that TopoCore is merely a complicated way of organizing logical
+linearity. That criticism asked whether the spatiality was real.
+This criticism answers more precisely - it identifies exactly why
+normal CPU spatiality fails and exactly why TopoCore's succeeds.
+The mechanism is locality enforcement. `The evidence is the absence
+of any inference layer between spatial layout and execution flow.`
