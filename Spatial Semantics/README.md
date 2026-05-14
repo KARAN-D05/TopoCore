@@ -343,3 +343,118 @@ This criticism answers more precisely - it identifies exactly why
 normal CPU spatiality fails and exactly why TopoCore's succeeds.
 The mechanism is locality enforcement. `The evidence is the absence
 of any inference layer between spatial layout and execution flow.`
+
+## Thought Experiment - Can A 1D CPU Be Semasiographic?
+
+### The Question
+
+Criticism 4 established that normal CPUs fail semasiography because
+of jumps and arbitrary addressing. But what if we remove those
+properties from a 1D CPU? Does semasiography require 2D topology,
+or is 1D sufficient?
+
+### The Construction
+
+**Step 1 - Remove jumps**
+
+Take a normal 1D CPU and eliminate all jump instructions. The program
+counter increments by one each step. Execution becomes a linear walk
+through consecutive addresses. No teleportation. No address inference.
+
+**Step 2 - Enforce spatial locality**
+
+Arrange memory cells so that address x and address x+1 are physically
+adjacent in space. Consecutive addresses are neighboring cells.
+The pointer moves from one physically adjacent cell to the next -
+exactly like TopoCore, but in one dimension.
+
+**Step 3 - Replace phonetic glyphs with non-phonetic ones**
+
+Replace all instruction symbols with purely visual non-phonetic marks.
+No letters encoding sounds. No phonographic inheritance. Glyphs connect
+directly to computational concepts without a sound layer underneath.
+
+**Result**
+
+A 1D jump-less non-phonetic CPU where:
+- Execution flow is directly readable from linear spatial layout
+- No address inference is needed, the next cell is simply the neighbor
+- Glyphs bypass sound - no phonetic layer
+
+This system satisfies both conditions for semasiographic computation.
+Its program a is linear strip of non-phonetic symbols that directly conveys
+execution flow through spatial adjacency.
+
+**A 1D CPU can be semasiographic.**
+
+### The Two Necessary And Sufficient Conditions
+
+This thought experiment clarifies the precise requirements for
+semasiographic computation:
+
+```
+Condition 1 - Locality
+No jumps. Spatial adjacency determines execution flow.
+The next instruction is always a physical neighbor.
+No teleportation. No address-based inference.
+```
+```
+Condition 2 - Non-phonetic glyphs
+No sound-based inference layer.
+Glyphs connect directly to concepts, not to phonemes.
+```
+
+Both conditions are necessary. Neither alone is sufficient.
+
+A system with locality but phonetic glyphs requires sound inference
+to read instructions - not semasiographic.
+
+A system with non-phonetic glyphs but jumps requires address inference
+to follow control flow - not semasiographic.
+
+Only when both conditions are satisfied simultaneously does the system
+become semasiographic.
+
+### Why TopoCore's 2D Approach Is Still Richer
+
+Conceding that a 1D semasiographic CPU is possible does not weaken
+TopoCore's claim. It clarifies it. TopoCore is not the only possible
+semasiographic computational system. It is a semasiographic system
+with greater expressive power than the 1D case.
+
+**Loops in 1D** require either a jump which violates locality
+or physical wrap-around topology. A circular tape is possible but
+constrained. Every loop must use the entire tape length.
+
+**Conditional forks are severely limited in 1D** - you have at most
+two neighbors: left and right. Complex branching requires multiple
+passes through the same cells, creating ambiguity in the spatial
+layout.
+
+**2D removes these limitations** - cycles, forks, merges, and
+crossing paths are all naturally representable without teleportation.
+Complex control flow has a direct spatial representation. The layout
+remains readable without annotation.
+
+### The Precise Claim For TopoCore
+
+TopoCore does not merely satisfy the two necessary conditions.
+It satisfies them in a 2D topology that enables:
+Cycles       - loops without wrap-around
+Forks        - conditional branches that can rejoin
+Multi-path   - complex routing without jumps
+Crossings    - paths sharing space without interference
+
+These are the expressive advantages of 2D semasiographic computation
+over 1D semasiographic computation. They are architectural properties,
+not cosmetic ones.
+
+### Final Statement
+
+> The two necessary and sufficient conditions for semasiographic
+> computation are locality and non-phonetic glyphs. A 1D CPU
+> satisfying both would be semasiographic. TopoCore satisfies both
+> conditions and adds 2D topology - enabling convergent forks,
+> multi-scale loops, and complex spatial control flow that are
+> inexpressible in 1D under locality constraints. The 2D grid is
+> not required for semasiography. It is required for expressiveness.
