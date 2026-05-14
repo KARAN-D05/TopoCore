@@ -440,10 +440,12 @@ remains readable without annotation.
 
 TopoCore does not merely satisfy the two necessary conditions.
 It satisfies them in a 2D topology that enables:
+```
 Cycles       - loops without wrap-around
 Forks        - conditional branches that can rejoin
 Multi-path   - complex routing without jumps
 Crossings    - paths sharing space without interference
+```
 
 These are the expressive advantages of 2D semasiographic computation
 over 1D semasiographic computation. They are architectural properties,
