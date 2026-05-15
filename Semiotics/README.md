@@ -168,13 +168,13 @@ by convention       movement partly     by resemblance
 The further right on the spectrum the more readable without a reference.
 The further left the more memorization required.
 
-## Design Implication For Topocore
+## Design Implication For TopoCore
 
 Befunge's current instruction set uses ASCII characters chosen for
 convenience - mostly arbitrary symbols with occasional motivated choices
 like `>` `<` `^` `v`.
 
-Topocore's glyph system will be designed deliberately.
+TopoCore's glyph system will be designed deliberately.
 
 The goal: maximize iconic encoding. Every glyph should carry as much
 meaning as possible through its shape alone, without relying on arbitrary
@@ -419,7 +419,7 @@ for over a thousand years and remain readable. Iconicity is not
 inherently unstable. Drift toward abstraction is a pressure, not
 an inevitability.
 
-**Implication for Topocore** - Dongba proves iconic systems are
+**Implication for TopoCore** - Dongba proves iconic systems are
 viable long term. Blissymbols shows how to make them practical.
 Topocore combines both lessons - viable iconic glyphs designed
 at minimal iconicity.
@@ -433,3 +433,157 @@ a single design principle emerges for Topocore's glyph system:
 > Remove everything else.
 > Design deliberately - do not let the system drift toward arbitrary abstraction.
 > Resist the entropy that turned fish into D.
+
+# Non-Linear Orthography
+
+## What Is Orthography
+
+Orthography refers to the conventions of a writing system - what
+direction to write, rules for spacing, capitalization, line breaks,
+and how marks combine. Not the marks themselves but the rules
+governing their arrangement.
+
+## Linear vs Non-Linear
+
+**Linear orthography** - writing follows a single sequential direction.
+One mark follows another along a line. Position encodes sequence only,
+what comes before and after. Nothing more.
+
+Examples:
+- English - left to right, top to bottom
+- Arabic - right to left
+- Traditional Chinese - top to bottom
+
+Different directions. All linear. One mark always follows another
+along a single axis.
+
+**Non-linear orthography** - marks are spread across space. Meaning
+is inferred from spatial arrangement rather than from a sequential
+reading path. Position encodes relationships - above, below, connected
+to, inside, outside - not just sequence.
+
+## Two Types Of 2D Writing Systems
+
+### Type 1 - Semantic Axes
+
+Each dimension independently encodes one thing. Meaning is read by
+interpreting each axis separately.
+
+Example - sheet music:
+- Horizontal axis encodes time
+- Vertical axis encodes pitch
+- Both axes carry independent deterministic meaning
+
+Example - mathematical superscripts:
+- Horizontal position encodes sequence
+- Vertical position encodes exponent relationship
+- Position relative to base symbol encodes operation type
+
+### Type 2 - Topological Space
+
+Dimensions define a traversable space. Neither axis independently
+encodes a fixed meaning. Instead both dimensions together define
+possible paths through the space. Meaning comes from which path
+is taken not from the axes themselves.
+
+Example - flowcharts:
+- No axis independently means anything
+- Meaning comes from following arrows through the diagram
+
+Example - circuit diagrams:
+- Components placed spatially
+- Meaning comes from tracing connections between components
+
+Example - Befunge and TopoCore:
+- Neither horizontal nor vertical axis encodes one fixed thing
+- Both dimensions define the topological space of possible execution
+- Meaning comes from which path the cursor takes through that space
+
+## Historical Examples
+
+### Boustrophedon
+
+Ancient Greek writing that alternates direction every line
+left to right on line 1, right to left on line 2, and so on.
+Like an ox plowing a field back and forth.
+
+Note - boustrophedon is still linear. It alternates direction
+but each line is still a sequential path. It breaks the assumption
+of fixed direction but not the assumption of linearity.
+
+### Aztec Codices
+
+Pre-Columbian manuscripts where reading order follows a winding
+path through the page indicated by footprints drawn between scenes.
+The reader follows the footprints not a fixed left-to-right order.
+
+The reading path is encoded in the document itself. This is
+explicitly topological, the path is drawn into the manuscript.
+Closer to Type 2 than Type 1.
+
+Footprints encode narrative flow with directional independence,
+they can curve, loop, cross, go anywhere on the page. The path
+is flexible and interpretive.
+
+### Chinese Seal Script and Oracle Bone Script
+
+Ancient Chinese writing where characters could be written in
+multiple orientations. Reading order was determined by context
+and spatial arrangement rather than fixed convention.
+
+Context-dependent reading order maps naturally to topological
+space, the reader determines the path rather than following
+a fixed one. Similar in principle to TopoCore's cursor following
+direction glyphs through the grid.
+
+## Aztec Footprints vs Befunge Direction Glyphs
+
+Both guide a reader through 2D space. Both are semasiographic.
+But they differ in three important ways.
+
+| Property | Aztec Footprints | Befunge Direction Glyphs |
+|----------|-----------------|--------------------------|
+| Sign type | Indexical - feet cause footprints | Iconic - shape resembles direction |
+| Iconicity | High - literally depicts feet in motion | Minimal - just enough to suggest direction |
+| Path constraint | None - can go anywhere narratively | Strict - constrained by grid and locality |
+| Reader | Human - tolerates interpretive latitude | Machine - requires zero ambiguity |
+| Encodes | Narrative flow | Computational flow |
+
+Aztec footprints tell a story - flexible and interpretive.
+Direction glyphs encode computation - deterministic and unambiguous.
+
+## The Machine Reading Constraint
+
+Computation is a step by step algorithmic process. Every instruction
+must have exactly one unambiguous meaning. A machine cannot infer
+intent or tolerate interpretive latitude.
+
+This imposes a hard constraint on TopoCore's glyph system:
+
+> Direction glyphs must be unambiguous, minimally iconic, and
+> orientation-sensitive. A glyph pointing right must be visually
+> distinct from a glyph pointing left at a glance with no
+> interpretive flexibility.
+
+Furthermore TopoCore glyphs must be:
+- Context independent - same glyph means same operation everywhere
+- Orientation discriminable - rotations of the same base shape
+  must be visually distinct
+- Minimally complex - simple enough to render in hardware and
+  decode unambiguously at the circuit level
+
+Human narrative reading tolerates ambiguity. Machine execution
+cannot. That constraint is the primary driver of TopoCore's
+glyph design rules.
+
+## Why TopoCore Is Non-Linear Orthography
+
+TopoCore programs are written on a 2D grid. No fixed reading
+direction exists. The cursor path through the grid is determined
+by direction glyphs placed spatially. A program with a loop has
+a visible cycle in the grid. A program with a branch has a visible
+fork. The spatial layout directly encodes the control flow structure.
+
+This satisfies the definition of non-linear orthography precisely -
+meaning is inferred from spatial arrangement, not from a sequential
+reading path along a single axis.
