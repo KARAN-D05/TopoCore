@@ -587,3 +587,180 @@ fork. The spatial layout directly encodes the control flow structure.
 This satisfies the definition of non-linear orthography precisely -
 meaning is inferred from spatial arrangement, not from a sequential
 reading path along a single axis.
+
+# Glyph System - Design Principles and Prototype Designs
+
+## Why A Custom Glyph System
+
+Befunge-93 uses ASCII characters as its instruction set. These were
+chosen for convenience - available on every keyboard in 1993. They
+carry arbitrary symbolic baggage, phonographic inheritance, and no
+deliberate iconic design.
+
+Topocore replaces them with purpose-designed glyphs governed by
+explicit design rules derived from semiotics, semasiography, and
+the machine reading constraint.
+
+## The Two Semasiographic Conditions
+
+Every glyph must satisfy both conditions:
+Condition 1 - Non-phonetic
+The glyph must not encode any sound from any spoken language.
+It must connect directly to a computational concept.
+Condition 2 - Locality compatible
+The glyph must be readable in isolation - its meaning must not
+depend on glyphs in non-adjacent cells.
+
+These are the minimum requirements. Everything else is enhancement.
+
+## The Five Design Rules
+
+### Rule 1 - Minimal Iconicity
+Keep only the visual feature that uniquely identifies the concept.
+Remove everything else.
+
+Derived from Blissymbols - primitives retain only the essential
+visual property that discriminates the concept from all others.
+A fish is an ellipse with crossing lines. Not a detailed drawing.
+Not an arbitrary symbol. The minimum iconic form.
+
+### Rule 2 - Zero Ambiguity
+Every glyph must be visually discriminable from every other glyph
+at a glance. No two glyphs may be confusable under any orientation
+or rendering condition.
+
+Derived from the machine reading constraint - a machine cannot
+infer intent or tolerate interpretive latitude. Human narrative
+reading tolerates ambiguity. Machine execution cannot.
+
+### Rule 3 - Orientation Sensitivity
+Glyphs that encode direction must be visually distinct across all
+four orientations. Rotating a glyph 90 degrees must produce a
+visually distinct and meaningfully consistent result.
+
+Derived from the 2D grid model - the same base glyph rotated
+should produce the corresponding rotated operation.
+
+### Rule 4 - Compositional Design
+Complex glyphs should be built from simpler primitive glyphs
+whose meanings combine logically. The composite meaning should
+be inferable from its components without a reference table.
+
+Derived from Blissymbols combination rules - heart plus person
+equals happy person. The combination is logical and visual.
+
+Example - horizontal conditional `<>` is built from `<` and `>`
+whose individual meanings are already known. Their combination
+implies a decision between two known directions.
+
+### Rule 5 - Hardware Friendliness
+Glyphs must be geometrically simple enough to:
+- Render at small scale without loss of discriminability
+- Be decoded unambiguously by combinational logic
+- Be stored efficiently in a 2D instruction ROM
+
+Derived from the hardware implementation constraint - every glyph
+is ultimately a pattern that a decode unit must map to an operation.
+Visual complexity that aids human reading but cannot be decoded
+simply in hardware is a design failure.
+
+## Prototype Glyph Designs
+
+### Direction Glyphs - Fully Iconic
+
+move right
+<    move left
+^    move up
+v    move down
+?    random direction - question mark, universally understood
+as undecided, no phonographic dependency
+in this context
+
+These are inherited from Befunge-93. They satisfy all five rules.
+They are the most iconic glyphs in the set - shape directly
+resembles direction. No redesign needed.
+
+### Conditional Glyphs - Compositional
+<>   horizontal conditional
+built from < and > - both directions present simultaneously
+tension between opposing directions implies decision
+
+^v   vertical conditional
+built from ^ and v - both directions present simultaneously
+same logic rotated 90 degrees
+
+Design principle - the ambiguity of two opposing directions
+IS the conditional. No extra decision symbol needed. The
+composition carries the meaning.
+
+### Control Glyphs
+✕    halt - stop execution
+universal stop/cancel symbol
+cross shape - seen in exit buttons, traffic signs, game over
+no phonographic dependency
+geometrically simple - two diagonal strokes
+no conflict with any other glyph
+
+∩    trampoline - skip next cell
+arc shape suggests trajectory going over an obstacle
+cursor arrives, arcs over next cell, lands on cell after
+partially iconic - arc implies jump
+best minimal form available for this concept
+
+### Input / Output Glyphs - Compositional
+[]->   output - print
+
+[] represents the grid - the system itself
+-> arrow shows data flowing outward from the system
+
+->[]   input - read 
+
+-> arrow shows data flowing inward into the system
+[] receives the incoming data
+
+Design note - `[]` is introduced here as a primitive meaning
+the system or grid. Not forced as a primitive everywhere -
+only where it makes semantic sense. Consistency over rigidity.
+
+### Arithmetic Glyphs 
+addition       . . → ..    two separate become one
+subtraction    .. → . .    one separates into two
+
+### Stack Manipulation Glyphs
+
+These are the most abstract operations - no natural iconic
+representation exists. Will lean symbolic while satisfying
+the non-phonetic condition. Partial iconicity where achievable.
+
+## Design Process
+
+Phase 1 - ASCII approximation - current phase
+Approximate glyphs using available keyboard characters.
+Establish design rules and compositional logic.
+Identify which opcodes need sketch phase.
+
+Phase 2 - Sketch phase
+Hand-draw glyphs on paper for opcodes that cannot be
+approximated in ASCII. Photograph and add to repo.
+Refine against the five design rules.
+
+Phase 3 - Finalization
+Produce clean vector versions of all glyphs.
+Test discriminability - can all glyphs be told apart at a glance?
+Test compositionality - do composite glyphs read from components?
+
+## Connection To Theory
+
+Every design rule traces back to a theoretical foundation:
+
+| Rule | Source |
+|------|--------|
+| Minimal iconicity | Blissymbols design principle |
+| Zero ambiguity | Machine reading constraint - non-linear orthography module |
+| Orientation sensitivity | 2D grid model - Befunge execution model |
+| Compositional design | Blissymbols combination rules - semasiography module |
+| Hardware friendliness | RTL decode unit requirement - hardware module |
+
+The glyph system is not aesthetic decoration. It is the semasiographic
+layer of Topocore's architecture - designed from first principles,
+governed by explicit rules, traceable to theory.
