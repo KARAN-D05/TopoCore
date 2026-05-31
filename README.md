@@ -28,7 +28,7 @@ Programs are treated as symbolic spaces through which computation moves.
 </p>
 
 <p align="center">
-    </b> Spatial Execution
+    <sub></b> Spatial Execution
 </p>
 
 > See spatial execution in action - place direction glyphs on a grid
