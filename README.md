@@ -1,4 +1,4 @@
-> Status: Exploratory research project. The architecture is under active conceptual development and is not yet a complete processor implementation.
+> Status: Exploratory research project. The architecture is under conceptual development and is not yet a complete processor implementation.
 
 # TopoCore
 
