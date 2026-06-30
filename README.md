@@ -1,3 +1,5 @@
+> Status: Exploratory research project. The architecture is under active conceptual development and is not yet a complete processor implementation.
+
 # TopoCore
 
 > A spatial execution architecture where computation emerges from movement through symbolic space.
@@ -14,8 +16,6 @@ Unlike traditional CPUs that execute instructions linearly using a single progra
 
 Execution is no longer a straight line.  
 Programs are treated as symbolic spaces through which computation moves.
-
-> Status: Exploratory research project. The architecture is under active conceptual development and is not yet a complete processor implementation.
 
 <p align="center">
   <img src="Semiotics/images/Spatial-Execution-Visualization.gif"  width="300">
