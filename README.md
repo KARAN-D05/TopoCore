@@ -2,7 +2,7 @@
 
 # TopoCore
 
-> A spatial execution architecture where computation emerges from movement through symbolic space.
+A spatial execution architecture where computation emerges from movement through symbolic space.
 
 ## What is TopoCore?
 
