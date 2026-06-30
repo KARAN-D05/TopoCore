@@ -71,14 +71,15 @@ The project explores:
 - symbolic systems,
 - and unconventional hardware architecture.
 
-## Goals
+## Possible Future Directions
 
-- Learn minimal computation through Brainfuck
-- Study spatial execution through Befunge
-- Build a software interpreter
-- Implement a SystemVerilog-based execution engine
-- Design a direction-aware control architecture
-- Explore symbolic and spatial computation systems
+As an exploratory research project, the implementation path is intentionally open-ended. Future work may include:
+
+- A software execution engine
+- Hardware prototypes
+- Formal execution semantics
+- Spatial instruction set design
+- Further exploration of symbolic and semasiographic computation
 
 > Teaching a machine to read meaning from space.
 
