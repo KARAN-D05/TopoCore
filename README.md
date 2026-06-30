@@ -2,13 +2,6 @@
 
 > A spatial execution architecture where computation emerges from movement through symbolic space.
 
-## ⚙️ Implementation Stack
-![Brainfuck](https://img.shields.io/badge/Brainfuck-212121?style=for-the-badge&logoColor=white)
-![Befunge](https://img.shields.io/badge/Befunge-EFEFEF?style=for-the-badge&logoColor=black)
-![Python](https://img.shields.io/badge/Python-00B0FF?style=for-the-badge)
-![C](https://img.shields.io/badge/C-5C6BC0?style=for-the-badge&logoColor=white)
-![SystemVerilog](https://img.shields.io/badge/SystemVerilog-FFEA00?style=for-the-badge&logoColor=white)
-
 ## What is TopoCore?
 
 TopoCore is an experimental hardware architecture inspired by two-dimensional programming languages such as Befunge.
@@ -21,6 +14,8 @@ Unlike traditional CPUs that execute instructions linearly using a single progra
 
 Execution is no longer a straight line.  
 Programs are treated as symbolic spaces through which computation moves.
+
+> Status: Exploratory research project. The architecture is under active conceptual development and is not yet a complete processor implementation.
 
 <p align="center">
   <img src="Semiotics/images/Spatial-Execution-Visualization.gif"  width="300">
@@ -62,7 +57,7 @@ TopoCore explores an alternative model where computation depends on spatial trav
 (X, Y, Direction) -> fetch -> interpret -> move
 ```
 
-This changes the architecture fundamentally:
+This explores a fundamentally different execution model in which:
 
 - the program counter becomes spatial,
 - instruction fetch becomes 2D,
@@ -86,36 +81,6 @@ The project explores:
 - Explore symbolic and spatial computation systems
 
 > Teaching a machine to read meaning from space.
-
-## Status
-
-- [x] Brainfuck - complete language study, programs, hardware mapping
-- [x] Befunge-93 - complete language study, programs, hardware mapping
-- [x] Theory - spatial semantics, semiotics
-- [ ] Interpreters - Python and C
-- [ ] Glyph system design
-- [ ] Hardware architecture
-- [ ] SystemVerilog implementation
-- [ ] FPGA synthesis and visualization
-
-## ⬇️ Download This Repository
-
-### 🪟 Windows
-Download → [download_repos.bat](./download_repos.bat)
-``` 
-Double-click it and pick the repo(s) you want.
-```
-
-### 🐧 Linux / macOS
-Download → [download_repos.sh](./download_repos.sh)
-```
-bash
-
-chmod +x download_repos.sh
-./download_repos.sh
-```
-
-> Always downloads the latest version.
 
 ## 📜License
 - Source code and HDL files are licensed under the MIT License.
